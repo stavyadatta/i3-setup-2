@@ -11,7 +11,7 @@ font pango:ShureTechMono Nerd Font 9
 
 # autostart
 exec --no-startup-id nitrogen --restore
-exec --no-startup-id xrandr --output HDMI-1-1 --auto --right-of eDP-1
+exec --no-startup-id xrandr --output HDMI-1-0 --auto --left-of eDP-1
 exec --no-startup-id "/home/$USER/.config/scripts/polybar/polybar-start.sh"
 exec --no-startup-id picom
 exec --no-startup-id dunst -config "/home/$USER/.config/dunst/dunstrc"
@@ -29,7 +29,7 @@ bindsym $mod+Ctrl+l exec  "/home/$USER/.config/scripts/system/lock.sh"
 
 # screenshots
 bindsym Print exec --no-startup-id flameshot screen
-bindsym $mod+Print exec --no-startup-id flameshot gui
+bindsym $mod+s exec --no-startup-id flameshot gui
 
 # volume
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +1%
@@ -41,7 +41,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 
 
 # screenshots
-bindsym $mod+s exec spectacle --region
+# bindsym $mod+s exec spectacle --region
 
 # start a terminal
 bindsym $mod+Return exec kitty
